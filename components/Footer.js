@@ -8,12 +8,12 @@ export default function Footer() {
     <FooterContainer>
       <div>
         <Email>Email: matiaspersonal@gmail.com</Email>
-        <FontAwesomeIcon icon={faEnvelope} size={"2x"} color={"black"} />
+        {/* <FontAwesomeIcon icon={faEnvelope} size={"1x"} color={"black"} /> */}
       </div>
       <div>
         <Telephone>Telephone: 01774946117</Telephone>
-        <FontAwesomeIcon icon={faPhoneSquareAlt} size={"2x"} color={"black"} />
+        {/* <FontAwesomeIcon icon={faPhoneSquareAlt} size={"1x"} color={"black"} /> */}
       </div>
     </FooterContainer>
-  );
+  )
 }

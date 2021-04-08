@@ -7,7 +7,6 @@ const FooterContainer = styled.div`
     align-items: center;
     color: black;
     overflow: scroll;
-    /* position: fixed; */
     bottom: 0;
     left: 0;
     width: 100%;

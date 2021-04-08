@@ -8,7 +8,7 @@ export default function Home() {
 
   useEffect(() => {
     const handleScroll = e => {
-      document.body.style.transform = "skewX(-20deg)";
+      document.body.style.transform = "skewX(-120deg)";
     }
 
     document.body.addEventListener('scroll', handleScroll)
@@ -26,14 +26,17 @@ export default function Home() {
           name="keywords"
           content="haus, furniture, möbel, aufbauen, möbel für zuhause"
         />
+        <link rel="preconnect" href="https://fonts.gstatic.com"/>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&ampdisplay=swap" rel="stylesheet"/> 
+        <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&ampdisplay=swap" rel="stylesheet"/> 
       </Head>
 
       <MainHeader>
         <Left>
           <h1>
-            wie schön,
+            WIE SCHÖN,
             <br />
-            myhome!
+            HOME!
           </h1>
         </Left>
         <CheckboxesGroup />

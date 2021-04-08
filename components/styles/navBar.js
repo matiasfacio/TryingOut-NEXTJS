@@ -18,10 +18,11 @@ const Nav = styled.nav`
   position: fixed;
   right: 0;
   top: 0;
-  transform: translateX(0vw);
+  transform: translateX(100vw);
   transition: transform 5s ease-in-out 2s;
   transition-timing-function: cubic-bezier(1, -0.65, 0, 2.31);
-  animation: 400ms ${FadeInMenu} ease-out;
+  animation: 800ms ${FadeInMenu} ease-out 1s forwards;
+  z-index: 999;
   ul {
     list-style: none;
     display: flex;
@@ -75,6 +76,7 @@ export const Logo = styled.div`
   cursor: pointer;
   transform: skew(20deg);
   animation: 1000ms ${bringInLogo} ease-in;
+  text-transform: uppercase;
   h2 {
     color: white !important;
     padding: 10px;
