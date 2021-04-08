@@ -1,14 +1,22 @@
-import Post from '../components/posts/Post'
-import PostPageStyle from '../components/styles/postsPagesStyles.js'
+import Post from "../components/posts/Post";
+import PostPageStyle from "../components/styles/postsPagesStyles.js";
+import LoadingPage from "../components/elementsLayout/loadingPageBlack";
+import PageAnimation from "../components/styles/animatePages";
 
 export default function posts({ articles }) {
- 
   return (
-    <PostPageStyle>
-      {articles.map((article) => (
-        <Post article = {article} />
-      ))}
-    </PostPageStyle>
+    <>
+      <LoadingPage>
+        <h2>myHome.de</h2>
+      </LoadingPage>
+      <PageAnimation>
+        <PostPageStyle>
+          {articles.map((article) => (
+            <Post article={article} />
+          ))}
+        </PostPageStyle>
+      </PageAnimation>
+    </>
   );
 }
 
