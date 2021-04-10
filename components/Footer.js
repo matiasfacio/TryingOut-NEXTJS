@@ -1,19 +1,29 @@
-import FooterContainer, {Email, Telephone} from "./styles/footerStyles";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope, faPhoneSquareAlt } from "@fortawesome/free-solid-svg-icons";
+import FooterContainer, {
+  Email,
+  Telephone,
+  FooterLeft,
+  FooterRight,
+  Impressum,
+  Address,
+} from "./styles/footerStyles";
 
 
 export default function Footer() {
   return (
     <FooterContainer>
-      <div>
-        <Email>Email: matiaspersonal@gmail.com</Email>
-        {/* <FontAwesomeIcon icon={faEnvelope} size={"1x"} color={"black"} /> */}
-      </div>
-      <div>
+      <FooterLeft>
+        <Address>
+          _Style_&_Design_ <br/>
+          Stargarder Strasse 74 <br/>
+          10437 <br/>
+          Berlin <br/>
+        </Address>
+      </FooterLeft>
+      <FooterRight>
         <Telephone>Telephone: 01774946117</Telephone>
-        {/* <FontAwesomeIcon icon={faPhoneSquareAlt} size={"1x"} color={"black"} /> */}
-      </div>
+        <Email>Email: matiaspersonal@gmail.com</Email>
+        <Impressum>Impressum</Impressum>
+      </FooterRight>
     </FooterContainer>
-  )
+  );
 }

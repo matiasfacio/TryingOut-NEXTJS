@@ -3,8 +3,10 @@ import {
   faCompass,
   faMapMarkerAlt,
   faUser,
-  faShoppingCart
+  faShoppingCart,
+  faEnvelope, faPhoneSquareAlt
 } from "@fortawesome/free-solid-svg-icons";
+
 
 const navButtons = [
     {
@@ -26,6 +28,16 @@ const navButtons = [
       label: "Profile",
       path: "/profile",
       icon: <FontAwesomeIcon icon={faUser} />
+    },
+    {
+      label: "Profile",
+      path: "/profile",
+      icon: <FontAwesomeIcon icon={faPhoneSquareAlt} />
+    },
+    {
+      label: "Profile",
+      path: "/profile",
+      icon: <FontAwesomeIcon icon={faEnvelope} />
     }
   ];
   
