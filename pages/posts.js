@@ -4,15 +4,16 @@ import LoadingPage from "../components/elementsLayout/loadingPageBlack";
 import PageAnimation from "../components/styles/animatePages";
 
 export default function posts({ articles }) {
+
   return (
     <>
       <LoadingPage>
-        <h2>myHome.de</h2>
+        <h2>_STYLE_&_DESIGN</h2>
       </LoadingPage>
       <PageAnimation>
         <PostPageStyle>
           {articles.map((article) => (
-            <Post article={article} />
+            <Post article={article} key={article.title}/>
           ))}
         </PostPageStyle>
       </PageAnimation>

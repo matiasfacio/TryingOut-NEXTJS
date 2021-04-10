@@ -1,12 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import LoadingPage from "../components/elementsLayout/loadingPageBlack";
 import PageAnimation from "../components/styles/animatePages";
 
 export default function Back() {
+
   return (
     <>
       <LoadingPage>
-        <h2>myHome.de</h2>
+        <h2>_STYLE_&_DESIGN</h2>
       </LoadingPage>
       <PageAnimation>
         <div>

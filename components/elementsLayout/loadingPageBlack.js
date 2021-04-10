@@ -20,7 +20,7 @@ const LoadingPage = styled.div`
     left:0;
     width: 150vw;
     height: 100vh;
-    background-color: chocolate;
+    background-color: black;
     display: flex;
     padding-left: 50%;
     align-items: center;

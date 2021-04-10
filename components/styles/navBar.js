@@ -72,7 +72,7 @@ export const Logo = styled.div`
   position: fixed;
   top: 0px;
   left: 10px;
-  background-color: chocolate;
+  background-color: black;
   cursor: pointer;
   transform: skew(20deg);
   animation: 1000ms ${bringInLogo} ease-in;

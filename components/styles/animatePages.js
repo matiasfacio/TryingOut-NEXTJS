@@ -2,10 +2,10 @@ import styled, { keyframes } from "styled-components";
 
 const animatePost = keyframes`
     0% {
-        transform: translateX(100vw) skew(60deg)
+        transform: translateX(100vw) 
     }
     100% {
-        transform: translateX(0) skew(-10deg)
+        transform: translateX(0)
     }
 `;
 

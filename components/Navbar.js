@@ -5,7 +5,7 @@ function Navbar() {
   return (
     <NavBarContainer>
       <Logo>
-          <Link href="/"><h2 style={{ color: "black" }}>myHome.de</h2></Link>
+          <Link href="/"><h2 style={{ color: "black" }}>_Style_&_Design</h2></Link>
       </Logo>
       <Nav>
         <ul>

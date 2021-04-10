@@ -2,10 +2,10 @@ import styled, { keyframes } from "styled-components";
 
 const animatePost = keyframes`
     0% {
-        transform: translateX(100vw) skew(60deg)
+        transform: translateX(100vw) 
     }
     100% {
-        transform: translateX(0) skew(-10deg)
+        transform: translateX(0)
     }
 `;
 
@@ -13,7 +13,7 @@ const PostStyle = styled.div`
   max-width: 300px;
   margin-bottom: 100px;
   background-color: whitesmoke;
-  transform: skew(-10deg) translateX(100vw);
+  transform: translateX(100vw);
   padding: 5px;
   margin: 30px;
   animation: ${animatePost} 1s forwards 1500ms;

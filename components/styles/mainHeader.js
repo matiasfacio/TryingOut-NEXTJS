@@ -30,7 +30,7 @@ const MainHeader = styled.div`
   margin: 0 auto;
   min-height: 100vh;
   position: relative;
-  background-color: chocolate;
+  background-color: transparent;
   z-index: 2;
   &::before{
     content: url('./hero.jpg');

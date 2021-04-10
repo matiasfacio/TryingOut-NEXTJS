@@ -5,6 +5,7 @@ const Section = styled.section`
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  position: relative;
   max-width: 1200px;
   margin: 200px auto;
   min-height: 80vh;
