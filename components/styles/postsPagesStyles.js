@@ -4,7 +4,7 @@ const PostPageStyle = styled.div`
     margin-top: 200px;
     position: relative;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
 `
 

@@ -17,7 +17,11 @@ const SectionContent = styled.div`
     text-transform: uppercase;
     font-weight: 600;
     transform: translate(50%, 250%);
+    &:hover ::after {
+      background-color: rgba(0,0,0,0.5);
+    }
   }
+
   
 `
 export default SectionContent

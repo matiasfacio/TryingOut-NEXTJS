@@ -45,32 +45,29 @@ export default function Home() {
       </Head>
 
       <LoadingPage>
-        <h2>_STYLE_&_DESIGN</h2>
+        <h2>_STYLE_&_DESIGN_</h2>
       </LoadingPage>
       <MainHeader>
         <Left>
           <h1>
-            Style
+            _Style_
             <br />
-            Design
+            &
+            <br/>
+            _Design_
           </h1>
         </Left>
         <CheckboxesGroup />
       </MainHeader>
 
-      <Section theme={{ bg: "transparent", color: "black" }}>
-        <SectionContent props = {{image: 'url(./living-room-brown.jpg)', text: 'Dreaming room'}}>
-        </SectionContent>
+      <Section theme={{ image: 'url(./living-room-brown.jpg)', text: 'Dreaming room'}}>
+        <h3>Life is just one</h3>
       </Section>
 
-      <Section theme={{ bg: "transparent", color: "black" }}>
-        <SectionContent  props = {{image: 'url(./room.jpg)', text: 'Style & Design'}}>
-        </SectionContent>
+      <Section theme={{ image: 'url(./room.jpg)', text: 'Designed furniture' }}>
       </Section>
 
-      <Section theme={{ bg: "transparent", color: "black" }}>
-      <SectionContent  props = {{image: 'url(./kitchen.jpg)', text: 'Classy & Elegant'}}>
-        </SectionContent>
+      <Section theme={{ image: 'url(./kitchen.jpg)', text: 'Classy & Elegant'}}>
       </Section>
     </div>
   );

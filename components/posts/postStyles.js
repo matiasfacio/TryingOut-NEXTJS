@@ -10,27 +10,15 @@ const animatePost = keyframes`
 `;
 
 const PostStyle = styled.div`
-  max-width: 300px;
+  /* max-width: 300px; */
   margin-bottom: 100px;
-  background-color: whitesmoke;
+  background-color: white;
   transform: translateX(100vw);
   padding: 5px;
   margin: 30px;
   animation: ${animatePost} 1s forwards 1500ms;
   h3 {
     text-transform: uppercase;
-  }
-  &::before,
-  ::after {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 2px;
-    background-color: gray;
-    transform: translateY(-10px);
-  }
-  &::after {
-    transform: translate(-42%, 30px);
   }
 `;
 

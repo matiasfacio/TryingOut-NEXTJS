@@ -33,14 +33,24 @@ const MainHeader = styled.div`
   background-color: transparent;
   z-index: 2;
   &::before{
-    content: url('./hero.jpg');
+    content: "";
     position: absolute;
-    top: 30%;
-    left: 30%;
+    background-image: url('./hero.jpg');
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    left: 0%;
     z-index: -1;
     filter: opacity(0.8);
     opacity: 0;
     animation: ${bringHeroIn} 2s forwards;
+    filter: grayscale(70%);
+    transition: all 500ms ease-in-out; 
+  }
+  &:hover::before{
+    filter: none;
+    transform: scale(1.1);
   }
   h1 {
     transform: translateX(-100vw);
@@ -49,7 +59,8 @@ const MainHeader = styled.div`
 `;
 
 export const Left = styled.div`
- max-width: 400px;
+ border: 10px black solid;
+ padding: 30px;
 `
 
 export default MainHeader;

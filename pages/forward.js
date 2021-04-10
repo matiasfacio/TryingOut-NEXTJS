@@ -7,7 +7,7 @@ export default function forward() {
   return (
     <>
       <LoadingPage>
-        <h2>_STYLE_&_DESIGN</h2>
+        <h2>_STYLE_&_DESIGN_</h2>
       </LoadingPage>
       <PageAnimation>
         <div>

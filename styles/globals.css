@@ -34,8 +34,10 @@ h1 {
   font-family: 'Lato', sans-serif;
   color: black;
   line-height: 1;
+  font-weight: 300;
+  text-align: left;
 }
 
 h2 {
-  font-weight: 600;
+  font-weight: 300;
 }
