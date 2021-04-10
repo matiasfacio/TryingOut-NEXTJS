@@ -10,7 +10,6 @@ const animatePost = keyframes`
 `;
 
 const PostStyle = styled.div`
-  /* max-width: 300px; */
   margin-bottom: 100px;
   background-color: white;
   transform: translateX(100vw);

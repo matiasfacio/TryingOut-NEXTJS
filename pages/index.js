@@ -5,7 +5,7 @@ import MainHeader, { Left } from "../components/styles/mainHeader";
 import CheckboxesGroup from "../lib/CheckboxeswithForms";
 import LoadingPage from "../components/elementsLayout/loadingPageBlack";
 // import PageAnimation from "../components/styles/animatePages";
-import SectionContent from "../components/styles/sectionContent"
+
 
 export default function Home() {
   useEffect(() => {

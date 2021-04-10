@@ -12,10 +12,14 @@ const Section = styled.section`
   border-radius:10px;
   overflow: hidden;
   transition: all 500ms ease-in-out;
+  cursor: pointer;
 
   &::before {
     position: absolute;
-    content:${props => props.theme.image};
+    content: "";
+    background-image:${props => props.theme.image};
+    background-position: center center;
+    background-repeat: no-repeat;
     width: 100%;
     height: 100%;
     top: 0;

@@ -10,11 +10,20 @@ export default function WeiterlessenButton({children}) {
 
 const Button = styled.button`
     background-color: white;
-    padding: 5px 10px;
+    padding: 10px 20px;
     border-radius: 10px;
-    border: none;
-    box-shadow: 5px 5px 10px gray;
+    border: 1px black solid;
     outline: none;
     font-weight: 500;
+    font-size: 0.8rem;
     color: black;
+    cursor: pointer;
+    transform: skewX(-20deg);
+    text-transform: capitalize;
+    transition: all 500ms ease-in-out;
+    &:hover {
+        background-color: black;
+        color: white;
+        transform: scale(1.1) skewX(0deg);
+    }
 `

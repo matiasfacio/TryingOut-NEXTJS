@@ -11,11 +11,11 @@ const bringHeroIn = keyframes`
 
 const bringTitleIn = keyframes`
  0% {
-    transform: translateX(-20vw);
+    transform: translateX(-20vw) rotateY(180deg);
     opacity: 0;
   }
   100% {
-    transform: translateX(0);
+    transform: translateX(0) rotateY(0deg);
     opacity: 1;
   }
 `
@@ -32,10 +32,12 @@ const MainHeader = styled.div`
   position: relative;
   background-color: transparent;
   z-index: 2;
+  overflow: hidden;
   &::before{
     content: "";
     position: absolute;
     background-image: url('./hero.jpg');
+    background-position: center center;
     background-size: cover;
     width: 100%;
     height: 100%;
@@ -54,13 +56,14 @@ const MainHeader = styled.div`
   }
   h1 {
     transform: translateX(-100vw);
+    padding: 30px;
+    border: 10px black solid;
     animation: ${bringTitleIn} 1s forwards 1s;
   }
 `;
 
 export const Left = styled.div`
- border: 10px black solid;
- padding: 30px;
+ padding: 20px;
 `
 
 export default MainHeader;
