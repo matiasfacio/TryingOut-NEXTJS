@@ -1,7 +1,10 @@
 import Nav, { Logo, NavBarContainer} from "./styles/navBar";
 import Link from "next/link";
+import Router from 'next/router'
 
 function Navbar() {
+
+
   return (
     <NavBarContainer>
       <Logo>
