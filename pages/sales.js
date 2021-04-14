@@ -19,14 +19,12 @@ export const getStaticProps = async () => {
 
   if (jsondata)
     return {
-      revalidate: 20,
       props: {
         data: jsondata,
       },
     };
   return {
     props: {
-      revalidate: 20,
       data: null,
     },
   };
@@ -38,8 +36,6 @@ export default function Back(props) {
   useEffect(() => {
     props.data && setData(props.data);
   }, []);
-
-  console.log(props.data);
 
   return (
     <>
