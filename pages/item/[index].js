@@ -1,16 +1,12 @@
-export const getServerSideProps = async (context) => {
-  return {
-    props: {
-      params: `${context.params.index}`,
-    },
-  };
-};
+import {useRouter} from 'next/router'
 
-export default function Item(props) {
+export default function Item() {
+    const router = useRouter()
+    console.log(router)
   return (
     <div>
       <h1>params!</h1>
-      {props.params && <h2>Index: {props.params}</h2>}
+      <h2>Index: {router.query.index}</h2>
     </div>
   );
 }
