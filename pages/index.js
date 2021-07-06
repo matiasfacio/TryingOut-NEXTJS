@@ -4,10 +4,10 @@ import Section from "../components/styles/section";
 import MainHeader, { Left } from "../components/styles/mainHeader";
 import CheckboxesGroup from "../lib/CheckboxeswithForms";
 import LoadingPage from "../components/elementsLayout/loadingPageBlack";
-// import PageAnimation from "../components/styles/animatePages";
 
 
 export default function Home() {
+
   useEffect(() => {
     const handleScroll = (e) => {
       document.body.style.transform = "skewX(-120deg)";
@@ -53,22 +53,26 @@ export default function Home() {
             _Style_
             <br />
             &
-            <br/>
+            <br />
             _Design_
           </h1>
         </Left>
         <CheckboxesGroup />
       </MainHeader>
 
-      <Section theme={{ image: 'url(./living-room-brown.jpg)', text: 'Dreaming room'}}>
+      <Section
+        theme={{ image: "url(./living-room-brown.jpg)", text: "Dreaming room" }}
+      >
         <h3>Life is just one</h3>
       </Section>
 
-      <Section theme={{ image: 'url(./room.jpg)', text: 'Designed furniture' }}>
-      </Section>
+      <Section
+        theme={{ image: "url(./room.jpg)", text: "Designed furniture" }}
+      ></Section>
 
-      <Section theme={{ image: 'url(./kitchen.jpg)', text: 'Classy & Elegant'}}>
-      </Section>
+      <Section
+        theme={{ image: "url(./kitchen.jpg)", text: "Classy & Elegant" }}
+      ></Section>
     </div>
   );
 }
