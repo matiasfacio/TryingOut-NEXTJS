@@ -9,11 +9,10 @@ export const getServerSideProps = async () => {
     const data = await fetch(
       "https://jsonplaceholder.typicode.com/photos?_limit=10"
     );
+    if (!data.ok) {
+      throw new Error("Error fetching data");
+    }
     const jsondata = await data.json();
-    if (!jsondata)
-      return {
-        notFound: true,
-      };
     return {
       props: {
         data: jsondata,

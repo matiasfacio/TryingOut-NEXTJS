@@ -11,6 +11,7 @@ const animatePost = keyframes`
 
 const PostStyle = styled.div`
   margin-bottom: 100px;
+  width: calc(300px, 60vw, 800px);
   background-color: white;
   transform: translateX(100vw);
   padding: 5px;
@@ -22,5 +23,3 @@ const PostStyle = styled.div`
 `;
 
 export default PostStyle;
-
-

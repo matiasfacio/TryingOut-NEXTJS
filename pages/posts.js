@@ -4,7 +4,6 @@ import LoadingPage from "../components/elementsLayout/loadingPageBlack";
 import PageAnimation from "../components/styles/animatePages";
 
 export default function posts({ articles }) {
-
   return (
     <>
       <LoadingPage>
@@ -13,7 +12,7 @@ export default function posts({ articles }) {
       <PageAnimation>
         <PostPageStyle>
           {articles.map((article) => (
-            <Post article={article} key={article.title}/>
+            <Post article={article} key={article.title} />
           ))}
         </PostPageStyle>
       </PageAnimation>
@@ -22,22 +21,26 @@ export default function posts({ articles }) {
 }
 
 export const getStaticProps = async () => {
-  const res = await fetch(
-    `https://jsonplaceholder.typicode.com/posts?_limit=6`
-  );
+  try {
+    const res = await fetch(
+      `https://jsonplaceholder.typicode.com/posts?_limit=6`
+    );
+    if (!res.ok) {
+      throw new Error("Error fetching data ohlala");
+    }
+    const articles = await res.json();
 
-  const articles = await res.json();
-
-  if (!res) {
     return {
-      notFound: true,
+      props: {
+        articles,
+      },
+      revalidate: 1,
     };
+  } catch (error) {
+    if (error) {
+      return {
+        notFound: true,
+      };
+    }
   }
-
-  return {
-    props: {
-      articles,
-    },
-    revalidate: 1,
-  };
 };
