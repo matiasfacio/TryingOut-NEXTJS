@@ -1,21 +1,21 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import LoadingPage from "../components/elementsLayout/loadingPageBlack";
 import PageAnimation from "../components/styles/animatePages";
-import Picture from "../lib/Picture";
 import DisplaySales from "../components/styles/displaySales";
+import SaleItem from "../lib/SaleItem";
 
-export const getServerSideProps = async () => {
+export async function getServerSideProps() {
   try {
-    const data = await fetch(
-      "https://jsonplaceholder.typicode.com/photos?_limit=10"
+    const result = await fetch(
+      "https://pixabay.com/api/?key=17184044-02a710095e858c208b6742168&=plaincolors&image_type=photo"
     );
-    if (!data.ok) {
-      throw new Error("Error fetching data");
+    if (!result.ok) {
+      throw new Error("error fetching data");
     }
-    const jsondata = await data.json();
+    const data = await result.json();
     return {
       props: {
-        data: jsondata,
+        data: data.hits,
       },
     };
   } catch (error) {
@@ -23,14 +23,18 @@ export const getServerSideProps = async () => {
       notFound: true,
     };
   }
-};
+}
 
-export default function Back(props) {
-  const [data, setData] = useState();
+export default function Sales({ data }) {
+  const [productsOnSale, setProductsOnSale] = React.useState(undefined);
+  React.useEffect(() => {
+    console.log(data);
+    setProductsOnSale(data);
+  }, [data]);
 
-  useEffect(() => {
-    props.data && setData(props.data);
-  }, []);
+  if (!productsOnSale) {
+    return <DisplaySales>Loading</DisplaySales>;
+  }
 
   return (
     <>
@@ -42,8 +46,10 @@ export default function Back(props) {
           <h1>
             Items on <span>sale</span>
           </h1>
-          {data &&
-            data.map((pic) => <Picture key={pic.id} pictureData={pic} />)}
+          {productsOnSale &&
+            productsOnSale.map((pic) => (
+              <SaleItem key={pic.id} pictureData={pic} />
+            ))}
         </DisplaySales>
       </PageAnimation>
     </>

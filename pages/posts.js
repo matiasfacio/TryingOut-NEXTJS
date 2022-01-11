@@ -37,10 +37,8 @@ export const getStaticProps = async () => {
       revalidate: 1,
     };
   } catch (error) {
-    if (error) {
-      return {
-        notFound: true,
-      };
-    }
+    return {
+      notFound: true,
+    };
   }
 };

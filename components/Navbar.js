@@ -23,12 +23,6 @@ function Navbar() {
           <li>
             <Link href="/posts">Design_Blog</Link>
           </li>
-          <li>
-            <Link href="/nasa">NASA</Link>
-          </li>
-          <li>
-            <Link href="/unplash">Unplash</Link>
-          </li>
         </ul>
       </Nav>
     </NavBarContainer>

@@ -4,10 +4,9 @@ import Section from "../components/styles/section";
 import MainHeader, { Left } from "../components/styles/mainHeader";
 import CheckboxesGroup from "../lib/CheckboxeswithForms";
 import LoadingPage from "../components/elementsLayout/loadingPageBlack";
-
+import { Logo } from "../components/elementsLayout/Logo";
 
 export default function Home() {
-
   useEffect(() => {
     const handleScroll = (e) => {
       document.body.style.transform = "skewX(-120deg)";
@@ -49,13 +48,7 @@ export default function Home() {
       </LoadingPage>
       <MainHeader>
         <Left>
-          <h1>
-            _Style_
-            <br />
-            &
-            <br />
-            _Design_
-          </h1>
+          <Logo />
         </Left>
         <CheckboxesGroup />
       </MainHeader>

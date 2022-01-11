@@ -1,3 +1,5 @@
+// fetching data fetching from an api endpoint.
+
 import { createApi } from "unsplash-js";
 
 const serverApi = createApi({

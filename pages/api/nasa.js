@@ -1,3 +1,5 @@
+// fetching data using an api endpoint.
+
 export default async function (req, res) {
   try {
     const data = await fetch(
