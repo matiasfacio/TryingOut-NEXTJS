@@ -1,5 +1,4 @@
-import { useRouter } from "next/router";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import ItemStyle from "./style.js";
 
 export async function getServerSideProps(context) {
@@ -33,18 +32,14 @@ export async function getServerSideProps(context) {
 }
 
 export default function Item({ item }) {
-  console.log(item);
   return (
     <ItemStyle>
-      {item && (
-        <div>
-          <h2>
-            <span>Title:</span>
-            {item.tags}
-          </h2>
-          <img src={item.userImageURL} alt="imagen" />
-        </div>
-      )}
+      <div>
+        <h3>Details</h3>
+        <pre>Id: {item.id}</pre>
+        <pre style={{ color: "blue" }}>Tags: {item.tags}</pre>
+      </div>
+      <img src={item.userImageURL} alt="imagen" />
     </ItemStyle>
   );
 }
