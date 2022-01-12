@@ -10,7 +10,7 @@ export async function getServerSideProps(context) {
 
   try {
     const result = await fetch(
-      `https://pixabay.com/api/?key=17184044-02a710095e858c208b6742168&=plaincolors&image_type=photo&id=${index}`
+      `https://pixabay.com/api/?key=${process.env.PIXABAY_KEY}&=plaincolors&image_type=photo&id=${index}`
     );
 
     if (!result.ok) {
@@ -38,6 +38,7 @@ export default function Item({ item }) {
           <h3>Details</h3>
           <pre>Id: {item.id}</pre>
           <pre style={{ color: "blue" }}>Tags: {item.tags}</pre>
+          <pre>Likes: {item.likes} 👍🏻</pre>
         </div>
         <img src={item.userImageURL} alt="imagen" />
       </ItemStyle>

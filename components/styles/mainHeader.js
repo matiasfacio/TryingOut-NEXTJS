@@ -24,13 +24,10 @@ const MainHeader = styled.div`
     top: 0%;
     left: 0%;
     z-index: -1;
-    filter: opacity(0.8);
     opacity: 1;
-    filter: grayscale(70%);
     transition: all 500ms ease-in-out;
   }
   &:hover::before {
-    filter: none;
     transform: scale(1.1);
   }
   h1 {

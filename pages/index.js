@@ -7,23 +7,6 @@ import LoadingPage from "../components/elementsLayout/loadingPageBlack";
 import { Logo } from "../components/elementsLayout/Logo";
 
 export default function Home() {
-  useEffect(() => {
-    const handleScroll = (e) => {
-      document.body.style.transform = "skewX(-120deg)";
-    };
-
-    document.body.addEventListener("scroll", handleScroll);
-
-    return () => {
-      document.body.removeEventListener("scroll", handleScroll);
-    };
-  });
-
-  useEffect(() => {
-    document.body.style.cssText =
-      "opacity:1; transition: all 500ms ease-in-out";
-  }, []);
-
   return (
     <div>
       <Head>
@@ -53,13 +36,25 @@ export default function Home() {
         <CheckboxesGroup />
       </MainHeader>
 
-      <Section image={"url(./living-room-brown.jpg)"} text={"Dreaming room"}>
+      <Section
+        image={"url(./living-room-brown.jpg)"}
+        text={"Dreaming room"}
+        key="firstsection"
+      >
         <h3>Life is just one</h3>
       </Section>
 
-      <Section image={"url(./room.jpg)"} text={"Designed furniture"}></Section>
+      <Section
+        image={"url(./room.jpg)"}
+        text={"Designed furniture"}
+        key="secondsection"
+      ></Section>
 
-      <Section image={"url(./kitchen.jpg)"} text={"Classy & Elegant"}></Section>
+      <Section
+        image={"url(./kitchen.jpg)"}
+        text={"Classy & Elegant"}
+        key="thirdsection"
+      ></Section>
     </div>
   );
 }

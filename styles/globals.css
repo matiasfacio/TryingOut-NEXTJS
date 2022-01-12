@@ -8,19 +8,6 @@ body {
   cursor: default;
 }
 
-@keyframes bringBodyIn {
-  0% {
-    transform: translateX(0vw) skewY(180deg);
-  }
-  100% {
-    transform: translateX(0) skewY(0deg);
-  }
-}
-
-body {
-  animation: bringBodyIn 1s forwards;
-}
-
 a {
   color: inherit;
   text-decoration: none;

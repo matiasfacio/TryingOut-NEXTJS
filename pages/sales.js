@@ -7,7 +7,7 @@ import SaleItem from "../lib/SaleItem";
 export async function getServerSideProps() {
   try {
     const result = await fetch(
-      "https://pixabay.com/api/?key=17184044-02a710095e858c208b6742168&=plaincolors&image_type=photo"
+      `https://pixabay.com/api/?key=${process.env.PIXABAY_KEY}&category=christmas&image_type=vector`
     );
     if (!result.ok) {
       throw new Error("error fetching data");
