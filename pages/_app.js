@@ -6,9 +6,9 @@ import React from "react";
 function ErrorFallback({ error }) {
   return (
     <div>
+      <pre style={{ color: "red" }}>{error.message}</pre>
       <p>ops! Something went wrong:</p> <br />
-      <pre>{error.message}</pre>
-      <pre>Please, reload this page.</pre>
+      <pre>Please, go to home and reload the page.</pre>
     </div>
   );
 }

@@ -9,7 +9,7 @@ const FadeInMenu = keyframes`
     opacity: 1;
     transform: translateX(0vw);
   }
-`
+`;
 
 const Nav = styled.nav`
   width: 100%;
@@ -29,7 +29,7 @@ const Nav = styled.nav`
     justify-content: center;
     li {
       padding: 10px;
-      color: black;
+      color: #292929;
       position: relative;
       margin-right: 50px;
       text-transform: uppercase;
@@ -65,14 +65,14 @@ const bringInLogo = keyframes`
   100% {
     transform: skew(20deg);
   }
-`
+`;
 
 export const Logo = styled.div`
   z-index: 9999;
   position: fixed;
   top: 0px;
   left: 10px;
-  background-color: black;
+  background-color: #292929;
   cursor: pointer;
   transform: skew(20deg);
   animation: 1000ms ${bringInLogo} ease-in;

@@ -6,7 +6,7 @@ function Navbar() {
     <NavBarContainer>
       <Logo>
         <Link href="/">
-          <h2 style={{ color: "black" }}>_Style_&_Design_</h2>
+          <h2 style={{ color: "#292929" }}>_Style_&_Design_</h2>
         </Link>
       </Logo>
       <Nav>

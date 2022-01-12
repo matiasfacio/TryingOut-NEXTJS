@@ -5,7 +5,7 @@ import PageAnimation from "../components/styles/animatePages";
 export default function forward() {
   React.useEffect(() => {
     throw new Error(
-      "error on foward component! (this is a made up error to test react-error-boundary)"
+      "Error on 'forward' page! (this is a made up error to test react-error-boundary)"
     );
   }, []);
   return (

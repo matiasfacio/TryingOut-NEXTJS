@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
 const FooterContainer = styled.div`
-  background-color: black;
+  background-color: #292929;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  color: black;
+  color: #292929;
   overflow: scroll;
   width: 100vw;
   height: 50vh;
@@ -35,10 +35,6 @@ export const Email = styled.div`
   line-height: 1.6;
 `;
 
-export const Telephone = styled(Email)`
-`;
-export const Impressum = styled(Email)`
-`;
-export const Address = styled(Email)`
-  
-`;
+export const Telephone = styled(Email)``;
+export const Impressum = styled(Email)``;
+export const Address = styled(Email)``;

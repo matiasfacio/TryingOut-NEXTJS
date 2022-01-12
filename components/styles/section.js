@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 const Section = styled.section`
   display: flex;
@@ -9,7 +9,7 @@ const Section = styled.section`
   max-width: 1200px;
   margin: 200px auto;
   min-height: 80vh;
-  border-radius:10px;
+  border-radius: 10px;
   overflow: hidden;
   transition: all 500ms ease-in-out;
   cursor: pointer;
@@ -17,7 +17,7 @@ const Section = styled.section`
   &::before {
     position: absolute;
     content: "";
-    background-image:${props => props.theme.image};
+    background-image: ${(props) => props.image};
     background-position: center center;
     background-repeat: no-repeat;
     width: 100%;
@@ -30,23 +30,21 @@ const Section = styled.section`
   }
   &::after {
     position: absolute;
-    content: '${props => props.theme.text}';
+    content: "${(props) => props.text}";
     font-size: 4rem;
     font-weight: 600;
     text-transform: uppercase;
-    color: black;
+    color: #292929;
     width: 100%;
     text-align: center;
     padding-top: 10%;
     top: 0%;
     transition: all 500ms ease-in-out;
-   
   }
   &:hover::before {
-      transform: scale(1.1);
-      filter: none;
-    }
- 
-`
+    transform: scale(1.1);
+    filter: none;
+  }
+`;
 
 export default Section;

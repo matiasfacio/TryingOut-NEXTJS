@@ -53,19 +53,13 @@ export default function Home() {
         <CheckboxesGroup />
       </MainHeader>
 
-      <Section
-        theme={{ image: "url(./living-room-brown.jpg)", text: "Dreaming room" }}
-      >
+      <Section image={"url(./living-room-brown.jpg)"} text={"Dreaming room"}>
         <h3>Life is just one</h3>
       </Section>
 
-      <Section
-        theme={{ image: "url(./room.jpg)", text: "Designed furniture" }}
-      ></Section>
+      <Section image={"url(./room.jpg)"} text={"Designed furniture"}></Section>
 
-      <Section
-        theme={{ image: "url(./kitchen.jpg)", text: "Classy & Elegant" }}
-      ></Section>
+      <Section image={"url(./kitchen.jpg)"} text={"Classy & Elegant"}></Section>
     </div>
   );
 }

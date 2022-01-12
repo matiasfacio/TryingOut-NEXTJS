@@ -1,4 +1,5 @@
 import React from "react";
+import { PageAnimationUp } from "../../components/styles/animatePages.js";
 import ItemStyle from "./style.js";
 
 export async function getServerSideProps(context) {
@@ -23,8 +24,6 @@ export async function getServerSideProps(context) {
       },
     };
   } catch (error) {
-    res.writeHead(302, { Location: "/" });
-    res.end();
     return {
       notFound: true,
     };
@@ -33,13 +32,15 @@ export async function getServerSideProps(context) {
 
 export default function Item({ item }) {
   return (
-    <ItemStyle>
-      <div>
-        <h3>Details</h3>
-        <pre>Id: {item.id}</pre>
-        <pre style={{ color: "blue" }}>Tags: {item.tags}</pre>
-      </div>
-      <img src={item.userImageURL} alt="imagen" />
-    </ItemStyle>
+    <PageAnimationUp>
+      <ItemStyle>
+        <div>
+          <h3>Details</h3>
+          <pre>Id: {item.id}</pre>
+          <pre style={{ color: "blue" }}>Tags: {item.tags}</pre>
+        </div>
+        <img src={item.userImageURL} alt="imagen" />
+      </ItemStyle>
+    </PageAnimationUp>
   );
 }

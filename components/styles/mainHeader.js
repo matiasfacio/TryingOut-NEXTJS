@@ -1,24 +1,4 @@
-import styled, { keyframes } from "styled-components";
-
-const bringHeroIn = keyframes`
-  0% {
-    opacity:0;
-  }
-  100% {
-    opacity: 1;
-  }
-`
-
-const bringTitleIn = keyframes`
- 0% {
-    transform: translateX(-20vw) rotateY(180deg);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0) rotateY(0deg);
-    opacity: 1;
-  }
-`
+import styled from "styled-components";
 
 const MainHeader = styled.div`
   padding: 20px;
@@ -33,10 +13,10 @@ const MainHeader = styled.div`
   background-color: transparent;
   z-index: 2;
   overflow: hidden;
-  &::before{
+  &::before {
     content: "";
     position: absolute;
-    background-image: url('./hero.jpg');
+    background-image: url("./hero.jpg");
     background-position: center center;
     background-size: cover;
     width: 100%;
@@ -45,25 +25,23 @@ const MainHeader = styled.div`
     left: 0%;
     z-index: -1;
     filter: opacity(0.8);
-    opacity: 0;
-    animation: ${bringHeroIn} 2s forwards;
+    opacity: 1;
     filter: grayscale(70%);
-    transition: all 500ms ease-in-out; 
+    transition: all 500ms ease-in-out;
   }
-  &:hover::before{
+  &:hover::before {
     filter: none;
     transform: scale(1.1);
   }
   h1 {
-    transform: translateX(-100vw);
+    transform: translateX(0vw);
     padding: 30px;
-    border: 10px black solid;
-    animation: ${bringTitleIn} 1s forwards 1s;
+    border: 10px #292929 solid;
   }
 `;
 
 export const Left = styled.div`
- padding: 20px;
-`
+  padding: 20px;
+`;
 
 export default MainHeader;
